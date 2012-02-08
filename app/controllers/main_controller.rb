@@ -12,9 +12,9 @@ class MainController < ApplicationController
     wb = p.workbook
 
     wb.add_worksheet(:name => "Proyectos") do |sheet|
-      sheet.add_row ["Nombre", "Tamaño", "Prioridad", "Owner"]
+      sheet.add_row ["Nombre", "Fase","Tamaño", "Prioridad", "Owner"]
       client_agilezen.project_stories(params[:projectid],:page=>1,:pageSize=>400).items.each do |project|
-        sheet.add_row [project.text,project[:size],project.priority,project.owner.name]
+        sheet.add_row [project.text,project.phase.name,project[:size],project.priority,project.owner.name]
       end
     
 

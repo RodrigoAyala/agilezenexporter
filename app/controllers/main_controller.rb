@@ -9,9 +9,9 @@ class MainController < ApplicationController
     p = Axlsx::Package.new
     wb = p.workbook
 
-    wb.add_worksheet(:name => "Basic Worksheet") do |sheet|
-    sheet.add_row ["First Column", "Second", "Third"]
-    sheet.add_row [1, 2, 3]
+    wb.add_worksheet(:name => "Proyectos") do |sheet|
+    sheet.add_row ["Nombre", "Descripción", "Fecha de creación", "Owner"]
+    
     end
 
     p.validate.each { |e| puts e.message }

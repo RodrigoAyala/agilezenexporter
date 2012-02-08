@@ -10,8 +10,13 @@ class MainController < ApplicationController
     wb = p.workbook
 
     wb.add_worksheet(:name => "Proyectos") do |sheet|
-    sheet.add_row ["Nombre", "Descripción", "Fecha de creación", "Owner"]
+      sheet.add_row ["Nombre", "Descripción", "Fecha de creación", "Owner"]
+      client_agilezen.projects.items.each do |project|
+        sheet.add_row [project.name,project.description,project.createTime,project.owner.name]
+      end
     
+
+
     end
 
     p.validate.each { |e| puts e.message }

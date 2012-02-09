@@ -1,4 +1,4 @@
-== Welcome to AgileZenExporter
+## Welcome to AgileZenExporter
 
 AgileZenExporter is a web application written in Ruby on Rails, to export stories to a .XLSX (Microsoft Excel 2007), given a projectId and a generated ApiKey, through a API exposed by AgileZen.
 
@@ -6,7 +6,7 @@ I've uploaded this for educational purposes only.  It's simple, and you can use 
 
 It uses Rails 3.2, axlsx gem, and agilezen gem.
 
-== Licence
+## Licence
 
            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                    Version 2, December 2004
